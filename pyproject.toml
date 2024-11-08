@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nba"
+version = "0.1.0"
+description = "A project for downloading and processing NBA data"
+authors = [{ name = "Your Name", email = "your.email@example.com" }]
+dependencies = [
+    "pandas",
+    "polars",
+    "duckdb",
+    "kaggle",
+    "seaborn",
+    "pre-commit",
+    "ipykernel",
+    "click"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "mypy"]
+
+[project.scripts]
+nba-cli = "nba.data_loader:main"
+
+[tool.setuptools]
+packages = ["nba"]
