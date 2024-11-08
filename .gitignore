@@ -1,0 +1,5 @@
+# Automatically created by mypy
+data/csv/*.csv
+data/nba.sqlite
+.mypy_cache/
+nba.egg-info
